@@ -1,5 +1,4 @@
 #include "DigiKeyboard.h"
-#include <stdlib.h>
 
 #define KEY_DOWN 0x51   // Keyboard Down Arrow
 #define KEY_ENTER 0x28  //Return/Enter Key
@@ -19,3 +18,4 @@ void setup() {
   //turn on led when program finishes
   digitalWrite(1, HIGH);  
 
+}
