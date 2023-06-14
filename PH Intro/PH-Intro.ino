@@ -6,16 +6,15 @@
 void setup() {
   DigiKeyboard.update();
   DigiKeyboard.sendKeyStroke(0);
-
-  //Windows + R Key
-  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);  
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);  //run
   DigiKeyboard.delay(100);
+  DigiKeyboard.println("chrome https://www.youtube.com/watch?v=QRtax4auSuA");  // Open chrome and run that link
+  digitalWrite(1, HIGH);  //turn on led when program finishes
+  DigiKeyboard.delay(13000);
+  DigiKeyboard.sendKeyStroke(KEY_W, MOD_CONTROL_LEFT);
+}
 
-  //Open Chrome to that link
-  DigiKeyboard.println("chrome https://www.youtube.com/watch?v=QRtax4auSuA");  
-  
-  system("start chrome https://www.youtube.com/watch?v=QRtax4auSuA");
-  //turn on led when program finishes
-  digitalWrite(1, HIGH);  
+void loop(){
+    pinMode(1, OUTPUT);  //LED on Model A
 
 }
